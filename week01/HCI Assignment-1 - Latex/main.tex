@@ -1,0 +1,133 @@
+
+
+\documentclass[12pt]{article}
+
+
+% ---------- Font (requires XeLaTeX or LuaLaTeX compiler) ----------
+\usepackage{fontspec}
+\setmainfont{Montserrat}   % or change to Roboto
+% \setmainfont{Roboto}     % <- uncomment this line (and comment the one above) to use Roboto instead
+
+% ---------- Packages ----------
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+% ---------- Packages ----------
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+% ---------- Colors matching the annotation arrows ----------
+\definecolor{arrowblue}{RGB}{31, 86, 214}
+\definecolor{arrowred}{RGB}{214, 40, 40}
+\definecolor{arrowgreen}{RGB}{27, 140, 60}
+\definecolor{arrowpurple}{RGB}{128, 0, 200}
+\definecolor{arroworange}{RGB}{255, 140, 0}
+\definecolor{arrowgold}{RGB}{170, 130, 0}
+\definecolor{navy}{RGB}{26, 26, 46}
+
+% ---------- Section title style ----------
+\titleformat{\section}{\large\bfseries\color{navy}}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+% ================= COVER PAGE =================
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\large University of Sindh -- IMCS}\\[1.5cm]
+
+{\Huge \bfseries \color{navy} HCI and Computer Graphics}\\[0.5cm]
+{\Large Assignment \#1}\\[1cm]
+
+\rule{0.7\textwidth}{0.8pt}\\[1.5cm]
+
+\begin{tabular}{ll}
+\vspace{12pt}
+\textbf{Name:} & Ahtsham Nizamani \\[0.3cm] \vspace{12pt}
+\textbf{Roll No:} & 2K24/CSE/23 \\[0.3cm] \vspace{12pt}
+\textbf{Semester:} & 6th \\[0.3cm] \vspace{12pt}
+\textbf{Subject:} & HCI and Computer Graphics \\[0.3cm] \vspace{12pt}
+\textbf{Submitted To:} & Sir Rajesh \\
+\end{tabular}
+
+\vfill
+\end{titlepage}
+
+% ================= PART 1: HCI FOCUS =================
+\begin{center}\section*{HCI - Assignment \#1: 3D Map App Overview --- Part \#1}\end{center}
+
+This assignment part focuses on an interface analysis of Google Earth, as 3D Map Overview.\vspace{12pt}
+
+\begin{center}
+\includegraphics[width=0.95\textwidth]{annotated_image.png} \vspace{12pt}
+\end{center}
+
+\begin{itemize}[leftmargin=1.2em, itemsep=6pt]
+    \item \textbf{\textcolor{arrowblue}{Blue Arrow (search bar):}} The \textcolor{arrowblue}{blue} arrow points to Google Earth's in-app search field --- the actual input point where a user types a location to search.
+
+    \item \textbf{\textcolor{arrowred}{Red Arrow (URL bar):}} The \textcolor{arrowred}{red} arrow points from the map view up to the browser's address bar, showing how the URL updates live to reflect the current search (``Rajo Nizamani'') --- a form of system feedback.
+
+    \item \textbf{\textcolor{arrowgreen}{Zoom Controls (Green Arrow):}} The \textcolor{arrowgreen}{green} arrow points to the bottom-right corner of the interface, highlighting the ``+'' (zoom in) and ``-'' (zoom out) controls. These allow users to adjust the map scale for detailed inspection or broader geographical context.
+\end{itemize}
+
+\vspace{12pt}\textbf{This is the first part of the assignment.}
+
+\newpage
+
+% ================= PART 2: CG FOCUS =================
+\begin{center}\section*{HCI - Assignment \#1: 3D Map App --- Part 2 (CG Focus)}\end{center}
+
+This part examines the computer graphics techniques of Google Earth's Street View. \vspace{12pt}
+
+\begin{center}
+\includegraphics[width=0.95\textwidth]{HCI_Assignment1_Part2_CG_Annotated (1).png}
+\end{center}
+
+\begin{itemize}[leftmargin=1.2em, itemsep=6pt] 
+    \vspace{12pt} \item \textbf{\textcolor{arrowpurple}{Perspective Camera View (Purple Arrow):}} The \textcolor{arrowpurple}{purple} arrow points down S Homan Ave to where the road and buildings converge, showing perspective projection --- distant objects shrink, creating the illusion of depth.
+
+    \item \textbf{\textcolor{arroworange}{Texture Mapping (Orange Arrow):}} The \textcolor{arroworange}{orange} arrow points to the plain siding on the beige building's exterior, where photographic material imagery is mapped onto its 3D surface. This gives the flat building geometry a realistic, detailed appearance.
+
+    \item \textbf{\textcolor{arrowgold}{Light Source \& Shadows (Gold Arrow):}} The \textcolor{arrowgold}{gold} arrow points to the shadow cast on the sidewalk by nearby trees/structures, implying a single light source (the sun) and helping ground objects in 3D space.
+\end{itemize}
+
+\vspace{12pt} \textbf{This is the second part of the assignment.}
+
+\newpage
+
+% ================= PART 3: REFLECTION =================
+\begin{center}\section*{HCI - Assignment \#1: Reflection Questions --- Part \#3}\end{center} \vspace{12pt}
+
+\textbf{Question 1:} How does the Computer Graphics quality (e.g., realistic lighting or 3D view) help or hinder the user's ability to interact with the software?
+
+\textbf{Answer:} The realistic satellite imagery and 3D view in Google Earth actually make it a lot easier to recognize real-world places and get a feel for how everything is laid out, so navigating feels pretty natural. That said, the tilted 3D angle isn't always helpful --- it can make text labels harder to read and distances tricky to judge, since the perspective kind of warps the scale of things.
+
+\vspace{0.5cm}
+
+\textbf{Question 2:} What is one simple HCI change you would make to improve the user interface?
+
+\textbf{Answer:} I'd make the zoom controls more obvious --- right now they're just small icon buttons that are easy to overlook. Adding a visible ``+/-'' label next to them would make it clearer at a glance what they do, especially for someone using the app for the first time.
+
+\vspace{1cm}
+\textbf{This is the third part of the assignment.}
+
+\end{document}
